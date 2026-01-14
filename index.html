@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Project Calculator | Philippines</title>
+    <title>Solar Project Calculator | jp-solarph</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -24,28 +24,24 @@
                     <label class="block text-sm font-bold text-gray-500 uppercase tracking-widest mb-4">Your Average Monthly Bill (₱)</label>
                     <input type="number" id="billInput" value="8000" step="500" 
                            class="w-full text-center text-4xl font-bold text-blue-700 border-b-4 border-blue-200 focus:border-blue-600 outline-none pb-2 transition-all">
-                    <p class="mt-4 text-gray-400 text-sm italic">Adjust the amount to update the quotation below</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-center">
                         <i class="fas fa-solar-panel text-blue-600 text-2xl mb-3"></i>
                         <p class="text-xs font-bold text-blue-800 uppercase">System Capacity</p>
-                        <p class="text-2xl font-black text-blue-900 mt-1"><span id="calcCapacity">3.5</span> kWp</p>
+                        <p class="text-2xl font-black text-blue-900 mt-1"><span id="calcCapacity">3.2</span> kWp</p>
                     </div>
-
                     <div class="bg-green-50 p-6 rounded-2xl border border-green-100 text-center">
                         <i class="fas fa-hand-holding-usd text-green-600 text-2xl mb-3"></i>
-                        <p class="text-xs font-bold text-green-800 uppercase">Estimated Savings</p>
-                        <p class="text-2xl font-black text-green-900 mt-1">₱<span id="calcSavings">5,600</span>/mo</p>
+                        <p class="text-xs font-bold text-green-800 uppercase">Est. Monthly Savings</p>
+                        <p class="text-2xl font-black text-green-900 mt-1">₱<span id="calcSavings">5,600</span></p>
                     </div>
-
                     <div class="bg-purple-50 p-6 rounded-2xl border border-purple-100 text-center">
                         <i class="fas fa-file-invoice text-purple-600 text-2xl mb-3"></i>
                         <p class="text-xs font-bold text-purple-800 uppercase">Net Metering Fee</p>
                         <p class="text-2xl font-black text-purple-900 mt-1">₱<span id="calcNetMetering">25,000</span></p>
                     </div>
-
                     <div class="bg-orange-50 p-6 rounded-2xl border border-orange-100 text-center">
                         <i class="fas fa-tools text-orange-600 text-2xl mb-3"></i>
                         <p class="text-xs font-bold text-orange-800 uppercase">Installation</p>
@@ -55,26 +51,42 @@
 
                 <div class="mt-12 bg-gray-900 rounded-2xl p-8 text-center text-white">
                     <p class="text-sm font-bold text-yellow-400 uppercase tracking-widest mb-2">Total Project Package</p>
-                    <h2 class="text-5xl md:text-6xl font-black mb-4">₱<span id="calcTotal">320,000</span></h2>
-                    <p class="text-gray-400 text-sm">Includes: Premium Panels, Inverter, Mounting, Installation, and Net Metering Application</p>
+                    <h2 class="text-5xl md:text-6xl font-black mb-4">₱<span id="calcTotal">265,000</span></h2>
+                    <p class="text-gray-400 text-sm italic">*Market average including materials, labor, and permits.</p>
                 </div>
 
                 <div class="mt-16 max-w-lg mx-auto border-t pt-12">
                     <h3 class="text-2xl font-bold text-center mb-8">Get the Official Quotation</h3>
-                   <form action="https://formsubmit.co/jpajorvina@gmail.com" method="POST" class="space-y-4">
-    
-    <input type="hidden" name="_next" value="https://PajorvinaSolar.github.io/Solar-Residential-Installation/thanks.html">
-    
-    <input type="hidden" name="_subject" value="New Detailed Solar Inquiry">
-    <input type="hidden" name="_captcha" value="false">
-    
-    <input type="text" name="Name" placeholder="Full Name" required class="w-full p-4 border rounded-xl outline-none focus:ring-2 focus:ring-blue-600">
-    <input type="tel" name="Phone" placeholder="Mobile Number" required class="w-full p-4 border rounded-xl outline-none focus:ring-2 focus:ring-blue-600">
-    
-    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-xl transition shadow-xl uppercase tracking-wider">
-        Email Me This Quote
-    </button>
-</form>
+                    
+                    <form action="https://formsubmit.co/jpajorvina@gmail.com" method="POST" class="space-y-4">
+                        <input type="hidden" name="_next" value="https://jp-solarph.github.io/thanks.html">
+                        <input type="hidden" name="_subject" value="New Detailed Solar Inquiry">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Full Name</label>
+                            <input type="text" name="Name" required class="w-full p-4 border rounded-xl outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Mobile Number</label>
+                            <input type="tel" name="Phone" required class="w-full p-4 border rounded-xl outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Email Address</label>
+                            <input type="email" name="Email" required class="w-full p-4 border rounded-xl outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-1">Installation Address</label>
+                            <textarea name="Address" rows="3" required class="w-full p-4 border rounded-xl outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                        </div>
+
+                        <input type="hidden" name="System_Capacity" id="hiddenCapacity">
+                        <input type="hidden" name="Total_Package_Price" id="hiddenTotal">
+
+                        <button type="submit" onclick="updateHiddenFields()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-5 rounded-xl transition shadow-xl uppercase tracking-wider">
+                            Email Me This Quote
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -85,24 +97,12 @@
         
         function calculateSolar() {
             const bill = parseFloat(billInput.value) || 0;
-            
-            // LOGIC:
-            // 1. Capacity: ~1kWp for every ₱2,500 of the bill
             const capacity = (bill / 2500).toFixed(1);
-            
-            // 2. Savings: ~70% of bill (conservative estimate)
             const savings = bill * 0.7;
-            
-            // 3. Net Metering: Standard processing fee in PH (~₱20k to ₱30k)
-            const netMetering = 30000;
-            
-            // 4. Installation: Estimated labor cost (~15% of total)
+            const netMetering = 25000;
             const installCost = (bill / 2500) * 12000;
-            
-            // 5. Overall Package: Capacity * Avg Market Rate (~₱65k-₱85k per kWp) + Net Metering
             const packagePrice = (capacity * 75000) + netMetering;
 
-            // UPDATE DISPLAY
             document.getElementById('calcCapacity').innerText = capacity;
             document.getElementById('calcSavings').innerText = Math.round(savings).toLocaleString();
             document.getElementById('calcNetMetering').innerText = netMetering.toLocaleString();
@@ -110,9 +110,13 @@
             document.getElementById('calcTotal').innerText = Math.round(packagePrice).toLocaleString();
         }
 
+        function updateHiddenFields() {
+            document.getElementById('hiddenCapacity').value = document.getElementById('calcCapacity').innerText + " kWp";
+            document.getElementById('hiddenTotal').value = "₱" + document.getElementById('calcTotal').innerText;
+        }
+
         billInput.addEventListener('input', calculateSolar);
-        window.onload = calculateSolar; // Run once on load
+        window.onload = calculateSolar;
     </script>
 </body>
 </html>
-
